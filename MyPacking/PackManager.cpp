@@ -6,13 +6,14 @@
 #include "FileManager.h"
 #include "glDraw.h"
 
-int main()
+int main(int argc, char *argv[])
 {
 	binPackingAlgorithm manager;
 
 	//弹出窗口，选择测试数据集
 	//------------------------------------------
-	std::string filePath = FileManager::GetFilePath();
+//	std::string filePath = FileManager::GetFilePath();
+	std::string filePath(argv[1]);
 	if (filePath == "")
 		return 0;
 	vector<vector<int>> bInfo = FileManager::GetFileIntData(filePath);
@@ -54,6 +55,7 @@ int main()
 
 	//opengl绘制结果
 	//------------------------------------------
+  glutInit( & argc, argv );
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);//设置显示模式
 	glutInitWindowSize(g_maxW, g_maxH); //设置窗口大小
 	glutInitWindowPosition(200, 100);   //设置窗口在屏幕上的位置 
