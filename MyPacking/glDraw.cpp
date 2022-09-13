@@ -1,3 +1,4 @@
+#include <iostream>
 #include "glDraw.h"
 #include "cstdlib"
 #include "PackStruct.h"
@@ -14,7 +15,12 @@ void glDraw::render()
 #ifdef SHOW_ALL
 	PreOrderTraverse(g_root);
 	glRasterPos2f(30.0f, g_maxH - 30.f);//设置文字位置
-	DrawString(CalculateFilledArea(0, 0));
+//	DrawString(CalculateFilledArea(0, 0));
+  static bool has_calc_filled_area = false;
+  if (!has_calc_filled_area) {
+    has_calc_filled_area = true;
+    std::cout << "Filled Area: " << CalculateFilledArea(0, 0) << std::endl;
+  }
 #else
 	sNode.push(g_root);//点击逐个显示
 #endif
