@@ -2,7 +2,7 @@
 #include "cstdlib"
 #include "PackStruct.h"
 #include "stack"
-#include "windows.h"
+//#include "windows.h"
 
 static stack<BlockTree*>sNode;
 
@@ -76,7 +76,7 @@ void glDraw::DrawString(string str)
 		//申请MAX__CHAR个连续的显示列表编号
 		lists = glGenLists(MAX_CHAR);
 		//把每个字符的绘制命令装到对应的显示列表中
-		wglUseFontBitmaps(wglGetCurrentDC(), 0, MAX_CHAR, lists);
+//		wglUseFontBitmaps(wglGetCurrentDC(), 0, MAX_CHAR, lists);
 	}
 
 	//调用每个字符对应的显示列表，绘制每个字符

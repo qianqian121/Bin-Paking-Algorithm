@@ -12,7 +12,7 @@ int main()
 
 	//弹出窗口，选择测试数据集
 	//------------------------------------------
-	CString filePath = FileManager::GetFilePath();
+	std::string filePath = FileManager::GetFilePath();
 	if (filePath == "")
 		return 0;
 	vector<vector<int>> bInfo = FileManager::GetFileIntData(filePath);
