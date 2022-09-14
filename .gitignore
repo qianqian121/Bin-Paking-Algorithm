@@ -4,3 +4,6 @@ BattleTank.VC.VC.opendb
 .vscode/
 MyPacking/Debug/
 MyPacking/x64/
+
+.idea/
+*build*/
