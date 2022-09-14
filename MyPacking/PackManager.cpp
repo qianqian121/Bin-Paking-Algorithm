@@ -36,6 +36,7 @@ int main(int argc, char *argv[])
 	cin >> sortType;
 	switch (sortType)
 	{
+	  case 0: break;
 		case 1:manager.SortByWidth(); break;
 		case 2:manager.SortByHeight(); break;
 		case 3:manager.SortByArea(); break;
